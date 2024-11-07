@@ -1,0 +1,21 @@
+[project]
+name = "example-client"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.115.4",
+    "example_lib",
+    "jupyter>=1.1.1",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "lark>=1.2.2",
+    "pytest>=8.3.3",
+    "ruff>=0.7.2",
+]
+
+[tool.uv.sources]
+example_lib = { git = "ssh://git@github.com/tabris2015/example_lib.git" }
